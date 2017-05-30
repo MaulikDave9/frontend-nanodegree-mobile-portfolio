@@ -1,6 +1,6 @@
 ## Website Performance Optimization portfolio project
 
-Optimizations in index.html (To achieve score of at least 90 for Mobile and Desktop)
+#### Part 1: Optimizations in index.html (To achieve score of at least 90 for Mobile and Desktop)
 
 Use https://developers.google.com/speed/pagespeed/insights to find the pagespeed before and after making the changes.
 Some of the changes that enabled the pagespeed 90:
@@ -13,5 +13,5 @@ Some of the changes that enabled the pagespeed 90:
 
 
 
-###Optimizations in views/js/main.js for pizza.html.
+#### Part 2: Optimizations in views/js/main.js for pizza.html.
 
