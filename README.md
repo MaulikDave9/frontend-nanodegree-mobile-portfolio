@@ -7,6 +7,7 @@ Changes that enabled the pagespeed 90:
 
 (1) Import web font, instead of href.
 (2) "async" JavaScript 
+(3) Download images on local server instead of getting from web (to save time it takes to get from the network)
 (3) 'Cam's Pizzaria' image was very large, resize/optimize.  
 
 
