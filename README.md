@@ -4,12 +4,15 @@
 
 Use https://developers.google.com/speed/pagespeed/insights to find the pagespeed before and after making the changes.
 Changes that enabled the pagespeed 90:
+Mobile: 91/100
+Desktop: 92/100
 
-(1) Import web font, instead of href.
-(2) "async" JavaScript 
-(3) Download images on local server instead of getting from web (to save time it takes to get from the network)
-(3) 'Cam's Pizzaria' image was very large, resize/optimize.  
-
+(1) Remove importing/href web fonts
+(2) Inline css - style and print (non-blocking CSS)
+(3) "async" JavaScript 
+(4) 'Cam's Pizzaria' image was very large, resize/optimize.  
+(5) Download images on local server instead of getting from web as an experiment but that surprisingly didn't help 
+    reduce the pagespeed.
 
 
 
