@@ -1,21 +1,20 @@
-## Website Performance Optimization portfolio project
+## Website Performance Optimization portfolio project ##
 
-#### Part 1: Optimizations in index.html (To achieve score of at least 90 for Mobile and Desktop)
+### Part 1: Optimizations in index.html (To achieve score of at least 90 for Mobile and Desktop) ###
 
 Use https://developers.google.com/speed/pagespeed/insights to find the pagespeed before and after making the changes.
-Changes that enabled the pagespeed 90:
-Mobile: 91/100
-Desktop: 92/100
+Mobile: 93/100
+Desktop: 94/100
 
-(1) Remove importing/href web fonts
-(2) Inline css - style and print (non-blocking CSS)
-(3) "async" JavaScript 
-(4) 'Cam's Pizzaria' image was very large, resize/optimize.  
-(5) Download images on local server instead of getting from web as an experiment but that surprisingly didn't help 
-    reduce the pagespeed.
+#### Changes that enabled the pagespeed 90: ####
 
-
+1. Remove importing/href web fonts
+2. Inline css - style and print (non-blocking CSS)
+3. "async" JavaScript 
+4. 'Cam's Pizzaria' image was very large, resize/optimize.  
+5. Downloaded images on local server instead of getting from web but that worsened pagespeed so put back image links.
 
 
-#### Part 2: Optimizations in views/js/main.js for pizza.html.
+
+### Part 2: Optimizations in views/js/main.js for pizza.html ###
 
