@@ -18,3 +18,6 @@ Desktop: 94/100
 
 ### Part 2: Optimizations in views/js/main.js for pizza.html ###
 
+1. Reduces the sliding pizzas when the page loads (from 200 to 5).
+
+
