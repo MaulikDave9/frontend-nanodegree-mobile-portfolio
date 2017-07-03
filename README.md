@@ -18,6 +18,9 @@ Desktop: 94/100
 
 ### Part 2: Optimizations in views/js/main.js for pizza.html ###
 
-1. Reduces the sliding pizzas when the page loads (from 200 to 5).
+1. Reduces the sliding pizzas when the page loads (from 200 to 24).
+2. Change items[i].style.left to items[i].style.transform in function updatePositions() 
+3. Define "document.querySelectorAll(".randomPizzaContainer")" as a var outside for loop in function changePizzaSizes(size)
+
 
 
