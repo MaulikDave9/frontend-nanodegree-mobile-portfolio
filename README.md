@@ -6,9 +6,7 @@
 Mobile: 93/100
 Desktop: 94/100
 
-#### From the main page (https://maulikdave9.github.io/frontend-nanodegree-mobile-portfolio/), please click " Cam's Pizzeria" and open Developer tools to verify
-required performance enhancements.  Following changes were made for each part. ####
-
+#### From the main page (https://maulikdave9.github.io/frontend-nanodegree-mobile-portfolio/), please click " Cam's Pizzeria", open Developer tools to verify performance enhancements. ####
 
 ### Part 1:  PageSpeed Score ###
 #### Optimizations in index.html for Critical Rendering Path changes to achieve score of at least 90 for Mobile and Desktop. ####
