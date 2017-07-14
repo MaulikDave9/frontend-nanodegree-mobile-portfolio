@@ -450,11 +450,14 @@ var resizePizzas = function(size) {
   // Iterates through pizza elements on the page and changes their widths
   // Change: To meet requirement of time to resize pizzas is less than 5 ms
   function changePizzaSizes(size) {
-    // Change: document.querySelectorAll(".randomPizzaContainer") outside forloop as a variable
-    var doc = document.querySelectorAll(".randomPizzaContainer")
+    // Change: document.querySelectorAll(".randomPizzaContainer") as variable outside forloop
+    // determineDx, newwidth outside for loop and so called once with doc[0] and not doc.length times 
+
+    var doc = document.querySelectorAll(".randomPizzaContainer");
+    var dx = determineDx(doc[0], size);  
+    var newwidth = (doc[0].offsetWidth + dx) + 'px';
+
     for (var i = 0; i < doc.length; i++) {
-      var dx = determineDx(doc[i], size);
-      var newwidth = (doc[i].offsetWidth + dx) + 'px';
       doc[i].style.width = newwidth;
     }
   }
