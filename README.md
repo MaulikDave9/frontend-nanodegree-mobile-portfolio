@@ -18,9 +18,10 @@ Desktop: 94/100
 
 ### Part 2: Optimizations in views/js/main.js for pizza.html ###
 
-1. Reduces the sliding pizzas when the page loads (from 200 to 24).
-2. Change items[i].style.left to items[i].style.transform in function updatePositions() 
+1. addEventListener: reduce the sliding pizzas when the page loads (from 200 to 24) 
+   and change elem.basicLeft to elem.style.Left for transform property.
+2. updatePositions: change items[i].style.left to items[i].style.transform.
 3. Define "document.querySelectorAll(".randomPizzaContainer")" as a var outside for loop in function changePizzaSizes(size)
+   and bring calculations that doesn't need to perform for all the iterations of for loop, outside the loop to get resize pizza less than 5 ms.
 
-
-
+On Chrome browser: "Time to resize pizzas: 0.5299999999951979ms", on Mozilla browser working not so good.  Hope it's not code issue but browser issue.
