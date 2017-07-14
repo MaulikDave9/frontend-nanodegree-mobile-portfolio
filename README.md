@@ -1,11 +1,16 @@
 ## Website Performance Optimization portfolio project ##
 
-### Part 1:  PageSpeed Score ###
+### Website: https://maulikdave9.github.io/frontend-nanodegree-mobile-portfolio/ ###
 
-Use https://developers.google.com/speed/pagespeed/insights to find the pagespeed before and after making the changes.
+#### Use https://developers.google.com/speed/pagespeed/insights to find the pagespeed before and after making the changes: ####
 Mobile: 93/100
 Desktop: 94/100
 
+#### From the main page (https://maulikdave9.github.io/frontend-nanodegree-mobile-portfolio/), please click " Cam's Pizzeria" and open Developer tools to verify
+required performance enhancements.  Following changes were made for each part. ####
+
+
+### Part 1:  PageSpeed Score ###
 #### Optimizations in index.html for Critical Rendering Path changes to achieve score of at least 90 for Mobile and Desktop. ####
 
 1. Remove importing/href web fonts
