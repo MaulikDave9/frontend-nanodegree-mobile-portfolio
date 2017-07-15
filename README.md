@@ -27,5 +27,7 @@ Desktop: 94/100
 
 #### 2. Computational Efficiency: Time to resize pizzas is less than 5 ms using the pizza size slider on the views/pizza.html page. ####
 
-1. Define "document.querySelectorAll(".randomPizzaContainer")" as a var outside for loop in function changePizzaSizes(size)
-   and bring calculations that doesn't need to perform for all the iterations of for loop, outside the loop!
+1. In function determineDx(elem, size), use document.getElementById(id) web API (faster) instead of document.querySelector(..).
+2. In function changePizzaSizes(size) for loop was calculating each iteration what could be done out side loop, 
+   define "document.querySelectorAll(".randomPizzaContainer")" as a var outside for loop and use getElementsByClassName() web API (faster)
+   and bring calculations/calls that doesn't need to perform for all the iterations of for loop outside the loop!
