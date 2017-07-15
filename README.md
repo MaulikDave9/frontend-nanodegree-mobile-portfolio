@@ -29,5 +29,3 @@ Desktop: 94/100
 
 1. Define "document.querySelectorAll(".randomPizzaContainer")" as a var outside for loop in function changePizzaSizes(size)
    and bring calculations that doesn't need to perform for all the iterations of for loop, outside the loop!
-
-On Chrome browser: "Time to resize pizzas: 0.5299999999951979ms", on Mozilla browser working not so good.  Hope it's not code issue but browser issue.
