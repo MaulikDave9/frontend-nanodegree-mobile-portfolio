@@ -515,8 +515,8 @@ function updatePositions() {
 
   var items = document.querySelectorAll('.mover');
   //Change: Moved phase caculation part that computes top, outside for loop to prevent the DOM being explicitly touched every iteration.
-  var top = Math.sin(document.body.scrollTop / 1250);
-  for (var i = 0; i < items.length; i++) {
+  var top = document.body.scrollTop / 1250;
+  for (var i = 0,phase ; i < items.length; i++) {
     //var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
     phase = Math.sin(top + (i % 5));
     //Change: items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
