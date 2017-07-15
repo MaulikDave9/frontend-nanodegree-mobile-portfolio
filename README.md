@@ -24,7 +24,7 @@ Desktop: 94/100
 
 
 1. addEventListener: reduce the sliding pizzas when the page loads (from 200 to 24), declaring the elem variable (var elem;) in the initialization the for loop 
-   to prevent from created everytime the loop is executed, 'movingPizzas' (DOM call) outside 'for' loop and define as local variable,  and change elem.basicLeft to elem.style.Left for transform property.
+   to prevent from created everytime the loop is executed, 'movingPizzas' (DOM call) outside 'for' loop and define as local variable,  and change elem.basicLeft to elem.style.left for transform property.
 2. updatePositions: change items[i].style.left to items[i].style.transform, and move 'phase' outside loop to prevent the DOM being explicitly touched in every
    iteration.
 3. In function determineDx(elem, size), use document.getElementById(id) web API (faster) instead of document.querySelector(..).
