@@ -461,8 +461,8 @@ var resizePizzas = function(size) {
     var doc = document.getElementsByClassName("randomPizzaContainer");
     var dx = determineDx(doc[0], size);  
     var newwidth = (doc[0].offsetWidth + dx) + 'px';
-
-    for (var i = 0; i < doc.length; i++) {
+    var len      = doc.length; // so array's length property is not accessed to check its value at each iteration.
+    for (var i = 0; i < len; i++) {
       doc[i].style.width = newwidth;
     }
   }
@@ -479,8 +479,9 @@ var resizePizzas = function(size) {
 window.performance.mark("mark_start_generating"); // collect timing data
 
 // This for-loop actually creates and appends all of the pizzas when the page loads
+//Change: Move pizzasDiv declaration outside for loop so DOM call is made one not 100 times.
+var pizzasDiv = document.getElementById("randomPizzas");
 for (var i = 2; i < 100; i++) {
-  var pizzasDiv = document.getElementById("randomPizzas");
   pizzasDiv.appendChild(pizzaElementGenerator(i));
 }
 
@@ -513,8 +514,11 @@ function updatePositions() {
   window.performance.mark("mark_start_frame");
 
   var items = document.querySelectorAll('.mover');
+  //Change: Moved phase caculation part that computes top, outside for loop to prevent the DOM being explicitly touched every iteration.
+  var top = Math.sin(document.body.scrollTop / 1250);
   for (var i = 0; i < items.length; i++) {
-    var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
+    //var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
+    phase = Math.sin(top + (i % 5));
     //Change: items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
     items[i].style.transform = 'translateX('+ 100*phase + 'px)';
   }
@@ -537,8 +541,13 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  for (var i = 0; i < 24; i++) {
-    var elem = document.createElement('img');
+  //Change: Declaring the elem variable (var elem;) in the initialisation of the for loop prevent from created everytime the loop is executed amd
+  // also move 'movingPizzas' outside for loop and use getElementById instead of querySelector!
+
+  var movingPizzas = document.getElementById("movingPizzas1");
+  for (var i = 0, elem; i < 24; i++) {
+    //var elem = document.createElement('img');
+    elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
     elem.style.height = "100px";
@@ -546,7 +555,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Change: elem.basicLeft = (i % cols) * s; transform property
     elem.style.left = (i % cols) * s + 'px';
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
-    document.querySelector("#movingPizzas1").appendChild(elem);
+    //document.querySelector("#movingPizzas1").appendChild(elem);
+    movingPizzas.appendChild(elem);
   }
   updatePositions();
 });
